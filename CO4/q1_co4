@@ -1,0 +1,54 @@
+package graphics;
+interface shapes
+{
+	void rectangle(float a,float b);
+	void triangle(float a,float b);
+	void circle(float r);
+	void square(float a);
+}
+public class figures implements shapes {
+	public void rectangle(float a,float b){
+		System.out.println("Area of rectangle is "+a*b);
+	}
+	public void triangle(float a,float b)
+ 	{
+		System.out.println("Area of triagngle is "+0.5*a*b);
+	}
+	public void circle(float r)
+	{
+		System.out.println("Area of circle is "+3.14*r*r);
+	}
+	public void square(float a)
+	{
+		System.out.println("Area of circle is "+a*a);
+	}
+}
+
+
+package area;
+import java.util.Scanner;
+
+import graphics.figures;
+
+public class q1_co4 {
+public static void main(String args[])
+{
+	int r,a,l,b,br,h;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the length and breadth of rectangle");
+	l=sc.nextInt();
+	b=sc.nextInt();
+	System.out.println("Enter the side of square");
+	a=sc.nextInt();
+	System.out.println("Enter the side of breadth and height");
+	br=sc.nextInt();
+	h=sc.nextInt();
+	System.out.println("Enter the side of circle");
+	r=sc.nextInt();
+	figures f=new figures();
+	f.circle(r);
+	f.rectangle(l, b);
+	f.triangle(br, h);
+	f.square(a);
+}
+}
